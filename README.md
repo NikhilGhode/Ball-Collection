@@ -1,2 +1,2 @@
-# DropDrownUnity
-This is sample DropDownProject
+# Ball Collection
+This is an assignment project for Intricare technologies
