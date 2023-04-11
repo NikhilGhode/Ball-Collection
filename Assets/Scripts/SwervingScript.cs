@@ -18,14 +18,12 @@ public class SwervingScript : MonoBehaviour
     Vector3 direction;
     private float velocity = 0f;
     public float smoothTime;
-
-    // Start is called before the first frame update
+    
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         GetInput();
@@ -35,17 +33,6 @@ public class SwervingScript : MonoBehaviour
     {
         if (GameManager.instance.gamePlay)
         {
-            //if (Input.GetMouseButton(0) && screenTouched == false)
-            //{
-            //    screenTouched = true;
-            //    GameManager.instance.TrialUI.SetActive(false);
-            //}
-
-            //if (screenTouched)
-            //{
-            //    transform.position += Vector3.forward * movementSpeed * Time.fixedDeltaTime;
-            //}
-
             if (isTouching)
             {
                 touchPosX += Input.GetAxis("Mouse X") * controlSpeed * Time.fixedDeltaTime;
@@ -53,8 +40,7 @@ public class SwervingScript : MonoBehaviour
 
             float xPos = Mathf.Clamp(touchPosX, xMin, xMax);
             xPos = Mathf.SmoothDamp(transform.position.x, xPos, ref velocity, smoothTime);
-            transform.position = new Vector2(xPos, transform.position.y);
-            //print(touchPosX);
+            transform.position = new Vector2(xPos, transform.position.y);            
         }
     }
 
