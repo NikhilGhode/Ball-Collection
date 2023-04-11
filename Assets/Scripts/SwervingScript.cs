@@ -7,7 +7,7 @@ public class SwervingScript : MonoBehaviour
 {
     [SerializeField] float movementSpeed;
     [SerializeField] float controlSpeed;
-    private float xMin = -2.2f, xMax = 2.2f;
+    private float xMin = -1.9f, xMax = 1.9f;
 
     //Touch Settings
     public bool gamePlay = true;
